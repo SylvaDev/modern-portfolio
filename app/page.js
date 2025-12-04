@@ -1,12 +1,11 @@
-// app/page.js
-
 export const metadata = {
-  title: "Irving (Bugzee) – Web Developer & Game Dev",
+  title: "Irving (SylvaDev) – Web Developer",
   description:
-    "Portfolio of Irving (Bugzee), a full-stack web developer and indie game creator building fast, modern websites and Unreal Engine projects.",
+    "Portfolio of Irving (SylvaDev), a full-stack web developer building fast, modern websites and web applications.",
 };
 
 const navLinks = [
+  { href: "#services", label: "Services" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#about", label: "About me" },
   { href: "#contact", label: "Contact" },
@@ -33,16 +32,6 @@ const services = [
       "Deployed to Vercel or your host",
     ],
   },
-  {
-    title: "Game Prototypes & Systems",
-    description:
-      "Unreal Engine prototypes and gameplay systems for content creators and indie teams.",
-    bulletPoints: [
-      "UE5 Blueprints systems",
-      "Multiplayer-ready logic",
-      "Horror & stylized projects",
-    ],
-  },
 ];
 
 const techStack = [
@@ -55,7 +44,14 @@ const techStack = [
   "Vercel",
   "REST APIs",
   "Git & GitHub",
-  "Unreal Engine 5",
+  "Three.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+  "MySQL",
+  "SQLite",
+  "Docker",
+  "AWS"
 ];
 
 const projects = [
@@ -74,20 +70,10 @@ const projects = [
     title: "Exovara Labs – Game Studio",
     description:
       "Brand site for my indie game studio, featuring current projects, lore, and ways to work together.",
-    stack: ["Next.js", "Tailwind", "Vercel"],
+    stack: ["Next.js", "React", "Tailwind", "Vercel"],
     link: "https://exovaralabs.com",
     highlight:
       "Unified branding for my game projects and development services under one roof.",
-  },
-  {
-    tag: "Horror Prototype",
-    title: "Hauntscape – Micro-Extraction Horror",
-    description:
-      "Unreal Engine horror prototype focused on tense extraction-style gameplay and replayable runs.",
-    stack: ["Unreal Engine 5", "Blueprints"],
-    link: "#",
-    highlight:
-      "Showcases my ability to design systems, atmosphere, and gameplay loops in UE5.",
   },
 ];
 
@@ -110,14 +96,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
       {/* Nav */}
-      <header className="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <header className="fixed top-0 left-0 right-0 z-30 border-b border-slate-800 bg-slate-950/50 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <a href="#" className="flex items-center gap-2">
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-500/10 text-sm font-semibold text-emerald-400">
-              BZ
+              IS
             </span>
             <span className="text-sm font-semibold tracking-[0.18em] uppercase text-slate-300">
-              BugzeeDev
+              Irving Sylva (SylvaDev)
             </span>
           </a>
 
@@ -142,28 +128,24 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 pb-20 pt-10 md:pt-16">
+      <main className="mx-auto max-w-6xl px-4 pb-20 pt-24 md:pt-28">
         {/* Hero */}
         <section className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
-              Welcome
-            </p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
-              Web apps that work hard.
+              Web apps that work hard
               <br />
               <span className="text-emerald-400">
-                Game worlds that feel alive.
+                User experiences that feel alive.
               </span>
             </h1>
-            <p className="mt-4 max-w-xl text-sm text-slate-300 md:text-base">
-              I&apos;m Irving (aka <span className="font-medium">Bugzee</span>),
-              a full-stack web developer and indie game creator. I build fast,
-              modern websites and Unreal Engine projects for communities,
-              creators, and businesses that want more than just a template.
+            <p className="mt-6 max-w-xl text-sm text-slate-300 md:mt-8 md:text-base lg:text-lg">
+              I&apos;m Irving (aka <span className="font-medium">SylvaDev</span>),
+              a full-stack web developer. I build fast, modern websites 
+              and web applications for communities, creators, and businesses that want more than just a template.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-10 lg:mt-12">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400"
@@ -179,27 +161,27 @@ export default function HomePage() {
               </a>
             </div>
 
-            <p className="mt-6 text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
-              Custom-built · Speed-optimized · Indie-friendly
+            <p className="mt-8 text-xs font-medium uppercase tracking-[0.18em] text-slate-400 md:mt-10 lg:mt-12">
+              Custom-built · Speed-optimized · Responsive
             </p>
           </div>
 
           <div className="relative">
             <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[2rem] bg-emerald-500/10 blur-3xl" />
-            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-5 shadow-2xl">
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 shadow-2xl md:p-8 lg:p-10">
               <div className="mb-4 flex items-center justify-between text-xs text-slate-400">
                 <span className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
                   Available for work
                 </span>
-                <span>Remote · CST</span>
+                <span>Remote · PST</span>
               </div>
               <div className="space-y-3 text-sm">
                 <p className="text-slate-200">
                   <span className="font-semibold text-emerald-400">
                     What I do:
                   </span>{" "}
-                  Web apps, landing pages, and Unreal Engine prototypes — from
+                  Web apps, landing pages, you name it — from
                   first idea to production-ready.
                 </p>
                 <p className="text-slate-300">
@@ -208,7 +190,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-300">
-                {["Next.js", "Tailwind", "Node.js", "Unreal Engine 5"].map(
+                {["Next.js", "Tailwind", "Node.js", "React", "Express", "MongoDB"].map(
                   (chip) => (
                     <span
                       key={chip}
@@ -228,7 +210,7 @@ export default function HomePage() {
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">
-                We got your back
+                I&apos;ve got your back
               </h2>
               <p className="mt-3 text-sm text-slate-300">
                 No black-box magic. You get clean, documented builds that are
@@ -250,30 +232,30 @@ export default function HomePage() {
               </h3>
               <p className="mt-2 text-sm text-slate-300">
                 Fast loads, clear structure, and a UX that actually respects
-                your visitors’ time.
+                your visitors&apos; time.
               </p>
             </div>
           </div>
         </section>
 
         {/* Services */}
-        <section id="services" className="mt-16">
+        <section id="services" className="mt-20 py-12 md:mt-32 md:py-16 lg:mt-40 lg:py-20">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
                 Services
               </p>
-              <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+              <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
                 What I build
               </h2>
-              <p className="mt-2 max-w-xl text-sm text-slate-300">
+              <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
                 From small business sites to multiplayer game prototypes, I
                 focus on durable builds that are easy to extend as you grow.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-3 lg:mt-16 lg:gap-8">
             {services.map((service) => (
               <article
                 key={service.title}
@@ -301,19 +283,19 @@ export default function HomePage() {
         </section>
 
         {/* Tech Stack */}
-        <section id="stack" className="mt-16">
+        <section id="stack" className="mt-2">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Tech stack
           </p>
-          <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+          <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
             Tools I use
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-slate-300">
+          <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
             I lean on proven tools that keep your project simple to maintain,
             but powerful enough to scale.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-2 md:mt-10 lg:mt-12">
             {techStack.map((item) => (
               <span
                 key={item}
@@ -326,19 +308,19 @@ export default function HomePage() {
         </section>
 
         {/* Projects / Portfolio */}
-        <section id="portfolio" className="mt-16">
+        <section id="portfolio" className="mt-20 py-12 md:mt-32 md:py-16 lg:mt-40 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Projects
           </p>
-          <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+          <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
             Selected work
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-slate-300">
+          <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
             A few recent projects that show how I think about structure,
             usability, and long-term maintainability.
           </p>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-2 lg:mt-16 lg:gap-8">
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -384,11 +366,11 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="mt-16">
+        <section id="testimonials" className="mt-0">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Testimonial
           </p>
-          <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+          <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
             What people say
           </h2>
 
@@ -411,27 +393,25 @@ export default function HomePage() {
         </section>
 
         {/* About */}
-        <section id="about" className="mt-16 grid gap-10 md:grid-cols-[2fr,3fr]">
+        <section id="about" className="mt-20 grid gap-10 py-12 md:mt-32 md:grid-cols-[2fr,3fr] md:py-16 lg:mt-40 lg:gap-16 lg:py-20">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
               My bio
             </p>
-            <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+            <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
               About me
             </h2>
             <h3 className="mt-3 text-sm font-semibold text-slate-200">
-              Hey, I&apos;m Irving – but most people online know me as
-              Bugzee.
+              Hey, I&apos;m Irving – born in 1991 in California, USA.
             </h3>
             <p className="mt-3 text-sm text-slate-300">
               I&apos;m a full-stack web developer and indie game creator. I
-              build sites, dashboards, and tools with React/Next.js and also
-              create games and prototypes in Unreal Engine 5.
+              build sites, dashboards, and tools with React/Next.js, Three.js, Node.js, and more.
             </p>
             <p className="mt-3 text-sm text-slate-300">
               My work tends to sit where design, code, and systems thinking
               overlap. Whether it&apos;s a community website, a small SaaS idea,
-              or a horror game prototype, I focus on making it both clean under
+               or an e-commerce store, I focus on making it both clean under
               the hood and fun to actually use.
             </p>
             <p className="mt-3 text-sm text-slate-300">
@@ -474,18 +454,18 @@ export default function HomePage() {
                 Email
               </div>
               <a
-                href="mailto:hello@yourdomain.com"
+                href="mailto:info@irvingsylva.dev"
                 className="mt-1 inline-flex text-sm font-medium text-emerald-400 underline-offset-4 hover:underline"
               >
-                hello@yourdomain.com
+                info@irvingsylva.dev
               </a>
             </div>
           </div>
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mt-16">
-          <div className="rounded-3xl border border-emerald-600/40 bg-gradient-to-r from-emerald-500/10 via-slate-900 to-slate-900 p-6 md:p-8">
+        <section id="contact" className="mt-32 py-12 md:mt-48 md:py-16 lg:mt-56 lg:py-20">
+          <div className="rounded-3xl border border-emerald-600/40 bg-gradient-to-r from-emerald-500/10 via-slate-900 to-slate-900 p-8 md:p-12 lg:p-16">
             <div className="grid gap-8 md:grid-cols-[3fr,2fr] md:items-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
@@ -495,8 +475,7 @@ export default function HomePage() {
                   Have a project in mind?
                 </h2>
                 <p className="mt-2 text-sm text-slate-200">
-                  Tell me what you&apos;re trying to build — a site, an app, or
-                  a game prototype — and I&apos;ll reply with options, timelines,
+                  Tell me what you&apos;re trying to build — a site, or an app — and I&apos;ll reply with options, timelines,
                   and what I recommend technically.
                 </p>
               </div>
@@ -551,9 +530,7 @@ export default function HomePage() {
                   Send message
                 </button>
                 <p className="text-[11px] text-slate-400">
-                  This form is static in this example. Hook it up to your
-                  backend, Formspree, Web3Forms, or similar to start receiving
-                  messages.
+                  This form is static in this example. (WIP)
                 </p>
               </form>
             </div>
@@ -563,10 +540,10 @@ export default function HomePage() {
         {/* Footer */}
         <footer className="mt-10 border-t border-slate-800 pt-6 text-xs text-slate-500">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p>© {new Date().getFullYear()} Irving / BugzeeDev. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Irving / SylvaDev. All rights reserved.</p>
             <div className="flex gap-4">
               <a
-                href="https://github.com/bugzeedev"
+                href="https://github.com/SylvaDev"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-emerald-400"
@@ -574,7 +551,7 @@ export default function HomePage() {
                 GitHub
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/irvingsylva"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-emerald-400"

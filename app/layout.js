@@ -2,8 +2,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "BugzeeDev – Web & Game Developer",
-  description: "Portfolio of Irving (Bugzee), full-stack web & game dev.",
+  title: "SylvaDev – Web & Game Developer",
+  description: "Portfolio of Irving Sylva, full-stack web developer.",
 };
 
 export default function RootLayout({ children }) {
