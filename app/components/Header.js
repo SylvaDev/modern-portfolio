@@ -18,7 +18,9 @@ export default function Header() {
           <span className="text-sm font-semibold tracking-[0.18em] uppercase text-slate-300">
             Irving Sylva (SylvaDev)
           </span>
-        </Link>
+        </Link> 
+
+{/* nav link to home not working. need to fix. should scroll to top*/}
 
         <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex">
           {navLinks.map((link) => (
