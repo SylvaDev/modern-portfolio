@@ -1,5 +1,6 @@
 // app/layout.js
 import "./globals.css";
+import BackgroundParticles from "./components/BackgroundParticles";
 
 export const metadata = {
   title: "SylvaDev – Web & Game Developer",
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative bg-slate-950 text-slate-50">
+        <BackgroundParticles />
+        {children}
+      </body>
     </html>
   );
 }

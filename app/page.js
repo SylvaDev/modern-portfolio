@@ -101,7 +101,7 @@ import ContactForm from "./components/ContactForm";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="min-h-screen">
       {/* Nav */}
       <header className="fixed top-0 left-0 right-0 z-30 border-b border-slate-800 bg-slate-950/50 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
@@ -137,7 +137,7 @@ export default function HomePage() {
 
       <main className="mx-auto max-w-6xl px-4 pb-20 pt-24 md:pt-28">
         {/* Hero */}
-        <section className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-center">
+        <section className="section-fade-in grid gap-10 md:grid-cols-[3fr,2fr] md:items-center">
           <div>
             <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
               Web apps that work hard
@@ -146,7 +146,7 @@ export default function HomePage() {
                 User experiences that feel alive.
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-sm text-slate-300 md:mt-8 md:text-base lg:text-lg">
+            <p className="mt-6 max-w-xl text-base text-slate-300 md:mt-8 md:text-lg">
               I&apos;m Irving (aka <span className="font-medium">SylvaDev</span>),
               a full-stack web developer. I build fast, modern websites 
               and web applications for communities, creators, and businesses that want more than just a template.
@@ -176,14 +176,14 @@ export default function HomePage() {
           <div className="relative">
             <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[2rem] bg-emerald-500/10 blur-3xl" />
             <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 shadow-2xl md:p-8 lg:p-10">
-              <div className="mb-4 flex items-center justify-between text-xs text-slate-400">
+              <div className="mb-4 flex items-center justify-between text-sm text-slate-400">
                 <span className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
                   Available for work
                 </span>
                 <span>Remote · PST</span>
               </div>
-              <div className="space-y-3 text-sm">
+              <div className="space-y-3 text-base">
                 <p className="text-slate-200">
                   <span className="font-semibold text-emerald-400">
                     What I do:
@@ -213,31 +213,31 @@ export default function HomePage() {
         </section>
 
         {/* Mini Feature / Promise */}
-        <section className="mt-16 rounded-3xl border border-slate-800 bg-slate-900/70 p-6 md:p-8">
+        <section className="section-fade-in mt-16 rounded-3xl border border-slate-800 bg-slate-900/70 p-6 md:p-8">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
                 I&apos;ve got your back
               </h2>
-              <p className="mt-3 text-sm text-slate-300">
+              <p className="mt-3 text-base text-slate-300">
                 No black-box magic. You get clean, documented builds that are
                 easy to grow, hand off, or maintain yourself.
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-base font-semibold text-slate-100">
                 Custom-built. Future-proof.
               </h3>
-              <p className="mt-2 text-sm text-slate-300">
+              <p className="mt-2 text-base text-slate-300">
                 Every project is tailored to your goals — not just plugged into
                 a generic theme and shipped.
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-100">
+              <h3 className="text-base font-semibold text-slate-100">
                 Performance & clarity.
               </h3>
-              <p className="mt-2 text-sm text-slate-300">
+              <p className="mt-2 text-base text-slate-300">
                 Fast loads, clear structure, and a UX that actually respects
                 your visitors&apos; time.
               </p>
@@ -246,7 +246,7 @@ export default function HomePage() {
         </section>
 
         {/* Services */}
-        <section id="services" className="mt-20 py-12 md:mt-32 md:py-16 lg:mt-40 lg:py-20">
+        <section id="services" className="section-fade-in mt-20 py-12 md:mt-32 md:py-16 lg:mt-40 lg:py-20">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
@@ -255,7 +255,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
                 What I build
               </h2>
-              <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
+              <p className="mt-2 max-w-xl text-base text-slate-300 md:text-lg">
                 From small business sites to multiplayer game prototypes, I
                 focus on durable builds that are easy to extend as you grow.
               </p>
@@ -266,17 +266,17 @@ export default function HomePage() {
             {services.map((service) => (
               <article
                 key={service.title}
-                className="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-5"
+                className="card-elevated flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-5"
               >
                 <div>
                   <h3 className="text-base font-semibold text-slate-50">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-300">
+                  <p className="mt-2 text-base text-slate-300">
                     {service.description}
                   </p>
                 </div>
-                <ul className="mt-4 space-y-1.5 text-xs text-slate-300">
+                <ul className="mt-4 space-y-1.5 text-sm text-slate-300">
                   {service.bulletPoints.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -290,14 +290,14 @@ export default function HomePage() {
         </section>
 
         {/* Tech Stack */}
-        <section id="stack" className="mt-2">
+        <section id="stack" className="section-fade-in mt-2">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Tech stack
           </p>
           <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
             Tools I use
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
+          <p className="mt-2 max-w-xl text-base text-slate-300 md:text-lg">
             I lean on proven tools that keep your project simple to maintain,
             but powerful enough to scale.
           </p>
@@ -306,7 +306,7 @@ export default function HomePage() {
             {techStack.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1 text-xs text-slate-200"
+                className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1 text-sm text-slate-200"
               >
                 {item}
               </span>
@@ -315,14 +315,14 @@ export default function HomePage() {
         </section>
 
         {/* Projects / Portfolio */}
-        <section id="portfolio" className="mt-20 py-12 md:mt-32 md:py-16 lg:mt-40 lg:py-20">
+        <section id="portfolio" className="section-fade-in mt-16 py-12 md:mt-24 md:py-16 lg:mt-32 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Projects
           </p>
           <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
             Selected work
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">
+          <p className="mt-2 max-w-xl text-base text-slate-300 md:text-lg">
             A few recent projects that show how I think about structure,
             usability, and long-term maintainability.
           </p>
@@ -331,7 +331,7 @@ export default function HomePage() {
             {projects.map((project) => (
               <article
                 key={project.title}
-                className="flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70"
+                className="card-elevated flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70"
               >
                 {project.image && (
                   <div className="relative h-44 w-full overflow-hidden border-b border-slate-800 bg-slate-900">
@@ -349,16 +349,16 @@ export default function HomePage() {
                   <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-emerald-400">
                     {project.tag}
                   </div>
-                  <h3 className="mt-2 text-lg font-semibold text-slate-50">
+                  <h3 className="mt-2 text-xl font-semibold text-slate-50">
                     {project.title}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-300">
+                  <p className="mt-2 text-base text-slate-300">
                     {project.description}
                   </p>
-                  <p className="mt-3 text-xs text-slate-400">
+                  <p className="mt-3 text-sm text-slate-400">
                     {project.highlight}
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-300">
+                  <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-300">
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
@@ -387,7 +387,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="mt-0">
+        <section id="testimonials" className="section-fade-in mt-0">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
             Testimonial
           </p>
@@ -399,9 +399,9 @@ export default function HomePage() {
             {testimonials.map((item) => (
               <figure
                 key={item.name}
-                className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-5"
+                className="card-elevated flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-5"
               >
-                <p className="text-sm text-slate-200">&ldquo;{item.quote}&rdquo;</p>
+                <p className="text-base text-slate-200">&ldquo;{item.quote}&rdquo;</p>
                 <figcaption className="mt-4 text-xs text-slate-400">
                   <div className="font-semibold text-slate-100">
                     {item.name}
@@ -414,7 +414,7 @@ export default function HomePage() {
         </section>
 
         {/* About */}
-        <section id="about" className="mt-20 grid gap-10 py-12 md:mt-32 md:grid-cols-[2fr,3fr] md:py-16 lg:mt-40 lg:gap-16 lg:py-20">
+        <section id="about" className="section-fade-in mt-20 grid gap-10 py-12 md:mt-32 md:grid-cols-[2fr,3fr] md:py-16 lg:mt-40 lg:gap-16 lg:py-20">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400">
               My bio
@@ -422,31 +422,31 @@ export default function HomePage() {
             <h2 className="mt-3 text-2xl font-semibold md:text-3xl lg:text-4xl">
               About me
             </h2>
-            <h3 className="mt-3 text-sm font-semibold text-slate-200">
+            <h3 className="mt-3 text-base font-semibold text-slate-200">
               Hey, I&apos;m Irving – born in 1991 in California, USA.
             </h3>
-            <p className="mt-3 text-sm text-slate-300">
+            <p className="mt-3 text-base text-slate-300">
               I&apos;m a full-stack web developer and indie game creator. I
               build sites, dashboards, and tools with React/Next.js, Three.js, Node.js, and more.
             </p>
-            <p className="mt-3 text-sm text-slate-300">
+            <p className="mt-3 text-base text-slate-300">
               My work tends to sit where design, code, and systems thinking
               overlap. Whether it&apos;s a community website, a small SaaS idea,
                or an e-commerce store, I focus on making it both clean under
               the hood and fun to actually use.
             </p>
-            <p className="mt-3 text-sm text-slate-300">
+            <p className="mt-3 text-base text-slate-300">
               Outside of client work, I run{" "}
               <span className="font-medium">Exovara Labs</span>, my independent
               game studio, and teach friends how to ship their own projects.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-            <h3 className="text-sm font-semibold text-slate-100">
+          <div className="card-elevated rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+            <h3 className="text-base font-semibold text-slate-100">
               What it&apos;s like to work with me
             </h3>
-            <ul className="mt-3 space-y-2.5 text-sm text-slate-300">
+            <ul className="mt-3 space-y-2.5 text-base text-slate-300">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 <span>
@@ -470,7 +470,7 @@ export default function HomePage() {
               </li>
             </ul>
 
-            <div className="mt-5 text-sm text-slate-300">
+            <div className="mt-5 text-base text-slate-300">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Email
               </div>
@@ -485,8 +485,8 @@ export default function HomePage() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mt-32 py-12 md:mt-48 md:py-16 lg:mt-56 lg:py-20">
-          <div className="rounded-3xl border border-emerald-600/40 bg-gradient-to-r from-emerald-500/10 via-slate-900 to-slate-900 p-8 md:p-12 lg:p-16">
+        <section id="contact" className="section-fade-in mt-32 py-12 md:mt-48 md:py-16 lg:mt-56 lg:py-20">
+          <div className="card-elevated rounded-3xl border border-emerald-600/40 bg-gradient-to-r from-emerald-500/10 via-slate-900 to-slate-900 p-8 md:p-12 lg:p-16">
             <div className="grid gap-8 md:grid-cols-[3fr,2fr] md:items-center">
               <div>
                 <p className="text-2xl font-semibold uppercase tracking-[0.4em] text-emerald-400">
@@ -495,7 +495,7 @@ export default function HomePage() {
                 <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
                   Have a project in mind?
                 </h2>
-                <p className="mt-2 text-sm text-slate-200">
+                <p className="mt-2 text-base text-slate-200">
                   Tell me what you&apos;re trying to build — a site, or an app — and I&apos;ll reply with options, timelines,
                   and what I recommend technically.
                 </p>

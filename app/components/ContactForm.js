@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
@@ -73,18 +74,18 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 text-sm">
+    <form onSubmit={handleSubmit} className="space-y-3 text-base">
       <div>
         <label
           htmlFor="name"
-          className="block text-xs font-medium text-slate-300"
+          className="block text-sm font-medium text-slate-300"
         >
           Name
         </label>
         <input
           id="name"
           type="text"
-          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-sm text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
+          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-base text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
           placeholder="Your name"
           value={formData.name}
           onChange={handleChange}
@@ -93,14 +94,14 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block text-xs font-medium text-slate-300"
+          className="block text-sm font-medium text-slate-300"
         >
           Email
         </label>
         <input
           id="email"
           type="email"
-          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-sm text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
+          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-base text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
           placeholder="you@example.com"
           value={formData.email}
           onChange={handleChange}
@@ -109,14 +110,14 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-xs font-medium text-slate-300"
+          className="block text-sm font-medium text-slate-300"
         >
           Project details
         </label>
         <textarea
           id="message"
           rows={3}
-          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-sm text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
+          className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2 text-base text-slate-100 outline-none ring-emerald-500/40 placeholder:text-slate-500 focus:ring"
           placeholder="Tell me about your idea, timeline, and budget range."
           value={formData.message}
           onChange={handleChange}
@@ -124,21 +125,17 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="w-full rounded-full bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-emerald-500/60"
+        className="w-full rounded-full bg-emerald-500 px-4 py-2.5 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-emerald-500/60"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send message"}
       </button>
-      <p className="text-[11px] text-slate-400">
+      <p className="text-sm text-slate-400">
         I&apos;ll get back within 1–2 business days.
-        <a
-          href="mailto:info@irvingsylva.dev"
-          className="font-medium text-emerald-400 underline-offset-4 hover:underline"
-        ></a>
       </p>
       {status.message && (
         <p
-          className={`text-[11px] ${
+          className={`text-xs ${
             status.type === "success" ? "text-emerald-400" : "text-red-400"
           }`}
         >
