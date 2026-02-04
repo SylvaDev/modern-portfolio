@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 export const metadata = {
-  title: "Irving (SylvaDev) – Web Developer",
+  title: "SylvaDev – Web Developer",
   description:
     "Portfolio of Irving (SylvaDev), a full-stack web developer building fast, modern websites and web applications.",
 };
