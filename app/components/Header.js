@@ -20,7 +20,7 @@ export default function Header() {
           </span>
         </Link> 
 
-{/* nav link to home not working. need to fix. should scroll to top*/}
+{/* nav link to home not working. need to fix. should scroll to top broken*/}
 
         <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex">
           {navLinks.map((link) => (
