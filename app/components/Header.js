@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -18,8 +19,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-30 border-b border-slate-800 bg-slate-950/50 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2" onClick={scrollToTop}>
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-500/10 text-sm font-semibold text-emerald-400">
-            IS
+          <span className="relative inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-emerald-500/10">
+            <Image src="/favicon.ico" alt="SylvaDev" width={32} height={32} className="object-contain" />
           </span>
           <span className="text-sm font-semibold tracking-[0.18em] uppercase text-slate-300">
             Irving Sylva (SylvaDev)
