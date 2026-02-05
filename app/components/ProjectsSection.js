@@ -5,8 +5,8 @@ const projects = [
     tag: "Community Platform",
     title: "Skyline RP – Community Website",
     description:
-      "Landing page and portal for a roleplay community with forum integration and Discord onboarding.",
-    stack: ["Next.js", "React", "Tailwind", "Node.js", "Vercel", "MongoDB"],
+      "Full-Stack Web Application offering a Landing page, Forum, Community Applications, Admin dashboard and Admin portal for a roleplay community with forum integration and Discord onboarding.",
+    stack: ["PostgreSQL", "Supabase", "React", "Tailwind", "Node.js", "Vercel"],
     link: "https://www.skyline-rp.org",
     image: "/skyline-rp-preview.png",
     highlight:
