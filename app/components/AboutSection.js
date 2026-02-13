@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ResumeButtons from "./ResumeButtons";
 
 export default function AboutSection() {
   return (
@@ -32,6 +33,7 @@ export default function AboutSection() {
           <span className="font-medium">Exovara Labs</span>, my independent game
           studio, and teach friends how to ship their own projects.
         </p>
+        {/* <ResumeButtons /> */}
       </div>
 
       <div className="card-elevated rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
@@ -73,6 +75,7 @@ export default function AboutSection() {
             Click here to Email the SylvaDev team
           </Link>
         </div>
+        <ResumeButtons />
       </div>
     </section>
   );
