@@ -8,6 +8,13 @@ import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Head from "next/head";
+
+<Head>
+  <title>SylvaDev – Web Developer</title>
+  <meta name="description" content="Portfolio of Irving (SylvaDev), a full-stack web developer building fast, modern websites and web applications." />
+  <link rel="canonical" href="https://www.irvingsylva.dev" />
+</Head>
 
 export const metadata = {
   title: "SylvaDev – Web Developer",
