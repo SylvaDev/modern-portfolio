@@ -59,7 +59,7 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-300">
-            {["Next.js", "Tailwind", "Node.js", "React", "Express", "MongoDB"].map(
+            {["Next.js", "Tailwind", "Node.js", "React", "Express", "MongoDB", "PostgreSql", "AWS", "Typescript"].map(
               (chip) => (
                 <span key={chip} className="rounded-full bg-slate-800 px-3 py-1">
                   {chip}
@@ -72,4 +72,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
