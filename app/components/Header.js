@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#about", label: "About me" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#about", label: "About me" },
+  { href: "/#contact", label: "Contact" },
   { href: "/clients", label: "Clients", internal: true },
 ];
 
@@ -51,7 +51,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400 md:inline-flex"
         >
           Work with me
