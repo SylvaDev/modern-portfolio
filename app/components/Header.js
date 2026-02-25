@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#portfolio", label: "Portfolio" },
   { href: "#about", label: "About me" },
   { href: "#contact", label: "Contact" },
+  { href: "/clients", label: "Clients", internal: true },
 ];
 
 function scrollToTop() {
@@ -28,15 +29,25 @@ export default function Header() {
         </Link>
 
         <nav className="hidden gap-6 text-sm font-medium text-slate-300 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition hover:text-emerald-400"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.internal ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-emerald-400"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-emerald-400"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
         <a
