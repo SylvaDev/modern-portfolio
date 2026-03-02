@@ -1,6 +1,7 @@
 // app/layout.js
 import "./globals.css";
 import BackgroundParticles from "./components/BackgroundParticles";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "SylvaDev – Web & Game Developer",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className="relative bg-slate-950 text-slate-50">
         <BackgroundParticles />
         {children}
+        <Analytics />
       </body>
     </html>
   );
