@@ -14,14 +14,14 @@ const projects = [
   },
   {
     tag: "Studio Brand Site",
-    title: "Exovara Labs – Game Studio",
+    title: "Exovara Labs – Web Development Studio",
     description:
-      "Brand site for my indie game studio, featuring current projects, lore, and ways to work together.",
-    stack: ["Express.js", "React", "Node.js", "Vercel"],
-    link: "https://exovaralabs.com",
+      "Brand site for Exovara Labs, a fullstack development studio and marketplace",
+    stack: ["Vite", "Tailwind", "React", "Supabase", "Shadcn UI", "Typescript", "Stripe"],
+    link: "https://www.exovaralabs.com",
     image: "/exovara-labs-preview.png",
     highlight:
-      "Unified branding for my game projects and development services under one roof.",
+      "Unified branding for my development studio and website marketplace and customizer.",
   },
 ];
 
